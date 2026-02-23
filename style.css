@@ -1,0 +1,2630 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base font size for rem calculations: 16px = 1rem */
+html {
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url(fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url(fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-Medium;
+    src: url(fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Worksans-Bold;
+    src: url(fonts/WorkSans-Bold.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+.container {
+    max-width: 120rem; 
+    margin: 0 auto;
+    padding: 0 18.75rem;
+    display: flex;
+}
+
+
+.site-header {
+    background-color: #000000;
+    height: 5.625rem;
+    position: relative;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18.75rem; 
+    gap: 3.75rem; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 6.25rem; 
+    height: 3.125rem; 
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem; 
+    flex: 1;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    font-family: Ubuntu-Medium;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.nav-link.active {
+    color: #F23849;
+}
+
+.nav-link:hover {
+    color: #F23849;
+}
+
+.join-btn {
+    background-color: #F23849;
+    color: #FFFFFF;
+    font-family: Ubuntu-Medium;
+    font-size: 1.125rem; 
+    font-weight: 500;
+    text-transform: capitalize;
+    border: none;
+    padding: 0.75rem 1.875rem; 
+    border-radius: 0.25rem; 
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #d62f3e;
+}
+
+
+.hero {
+    position: relative;
+    min-height: 50rem; 
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/man.png') center/cover no-repeat;
+  z-index: 1;
+}
+
+.hero-man {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom right;
+}
+.design-content{
+    
+    top: 17.65rem;
+}
+
+.hero-container {
+    position: relative;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 18.75rem; 
+    min-height: 50rem; 
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 53.375rem; 
+    padding-top: 10.375rem; 
+    z-index: 3;
+   
+}
+
+.hero-title {
+    color: #FFFFFF;
+    font-family: Ubuntu-Bold;
+    font-size: 5rem; 
+    font-weight: 700;
+    line-height: 6rem; 
+    text-transform: capitalize;
+    margin: 0 0 1.25rem 0; 
+}
+
+.hero-description {
+    color: #FFFFFF;
+    font-family: Ubuntu-Regular;
+    font-size: 1.125rem; 
+    font-weight: 400;
+    line-height: 1.6875rem;
+    letter-spacing: 0.0225rem; 
+    margin: 0 0 4.375rem 0; 
+    max-width: 49.5625rem; 
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F23849;
+    color: #FFFFFF;
+    font-family: Ubuntu-Medium;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 1.375rem 3.125rem;
+    border-radius: 0.25rem; 
+    transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #d62f3e;
+}
+
+.hero-line-top-right {
+  position: absolute;
+  top: 14rem;
+  right: 5rem;
+  width: 40px;
+  bottom: 35,8125rem;
+  height: 2px;
+  
+  /* чтобы начинаться от правого верхнего угла заголовка */
+}
+
+.hero-line-top-right::after {
+  content: '';
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 2px;
+  height: 40px;
+  
+}
+
+.hero-line-left {
+  position: absolute;
+  top: 50%;
+  right: -40rem;
+  width: 2px;
+  height: 120px;
+  background: #F23849;
+  transform: translateY(-50%);
+}
+.design-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.design-content img {
+    width: auto;
+    height: auto;
+    margin-left: 12rem;
+}
+
+
+.trainer-card {
+    position: absolute;
+    top: 13rem; 
+    right: 19.5rem; 
+    width: 9.875rem; 
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(1.5625rem); 
+    border-radius: 0.75rem;
+    padding: 1.25rem; 
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trainer-avatar {
+    width: 4.375rem; /* 70px */
+    height: 4.375rem; /* 70px */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.trainer-name {
+    color: #161617;
+    font-family: Poppins-Medium;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    margin: 0 0 0.125rem 0; /* 0 0 2px 0 */
+}
+
+.trainer-title {
+    color: #FFFFFF;
+    font-family: Poppins-Regular;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Stats Card */
+.stats-card {
+    position: absolute;
+    bottom: 8.9375rem; /* 143px */
+    right: 21.6875rem; /* 347px */
+    width: 19.0625rem; /* 305px */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(1.075625rem); /* 17.21px */
+    border-radius: 0.5rem; /* 8px */
+    padding: 0.9375rem; /* 15px */
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem; /* 15px */
+    z-index: 10;
+}
+
+.stats-avatars {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 7.5rem;
+    /* 120px */
+}
+
+.client-avatar {
+    width: 2.75rem; /* 44px */
+    height: 2.75rem; /* 44px */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.125rem solid rgba(255, 255, 255, 0.5); /* 2px */
+    margin-left: -0.625rem; /* -10px */
+}
+
+.client-avatar:first-child {
+    margin-left: 0;
+}
+
+.stats-badge {
+    position: absolute;
+    right: -0.9375rem; /* -15px */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #F23849;
+    color: #ffffff;
+    font-family: Ubuntu-Bold;
+    font-size: 0.7275rem; /* 11.64px */
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 0.25rem 0.5rem; /* 4px 8px */
+    border-radius: 0.25rem; /* 4px */
+}
+
+.stats-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem; /* 2px */
+}
+
+.stats-number {
+    color: #FFFFFF;
+    font-family: Ubuntu-Bold;
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1;
+    text-align: center;
+}
+
+.stats-label {
+    color: #FFFFFF;
+    font-family: Ubuntu-Regular;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.stats-stars {
+    width: 3.3125rem; /* 53px */
+    height: 0.625rem; /* 10px */
+     display: block;
+  margin: 0 auto; 
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+    background-color: #222224;
+    padding: 5rem 0; /* 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.features .container {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6.25rem; /* 100px */
+}
+
+.features-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem; /* 40px */
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 17.5rem; /* 280px */
+}
+
+.feature-card .icon {
+    width: 3.75rem; /* 60px */
+    height: 3.75rem; /* 60px */
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.feature-card h3 {
+    margin: 0 0 0.75rem 0; /* 0 0 12px 0 */
+    font-family: Ubuntu-Medium;
+    font-size: 1rem; /* 16px */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem; /* 1px */
+    color: #FFFFFF;
+}
+
+.feature-card p {
+    font-family: Ubuntu-Regular;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    line-height: 1.3125rem; /* 21px */
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.features-right {
+    flex: 0 0 25rem; /* 400px */
+    display: flex;
+    align-items: flex-start;
+    padding-top: 1.25rem; /* 20px */
+   
+}
+.features .container {
+  position: relative;
+}
+
+.features-right {
+  flex: 0 0 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1.25rem;
+  position: relative; /* ← обязательно */
+}
+
+.features-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2.5rem; /* 40px — отступ от текста */
+  height: 100%;
+  width: 0.0625rem; /* 1px */
+  background: rgba(255, 255, 255, 0.1);
+}
+.feature-text h2 {
+    color: #FFFFFF;
+    font-family: Ubuntu-Bold;
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    line-height: 2.925rem; /* 46.8px */
+    margin: 0 0 1.25rem 0; /* 0 0 20px 0 */
+}
+
+.feature-text p {
+    color: #FFFFFF;
+    font-family: Ubuntu-Regular;
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    line-height: 1.6rem; /* 25.6px */
+    margin: 0;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+    background-color: #28282A;
+    padding: 5rem 0; /* 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.about .container {
+    gap: 3.75rem; /* 60px */
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text h2 {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: 3.5rem; /* 56px */
+    line-height: 4.55rem; /* 72.8px */
+    margin: 0 0 1.5rem 0; /* 0 0 24px 0 */
+}
+
+.about-text p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.8rem; /* 28.8px */
+    margin: 0 0 2.5rem 0; /* 0 0 40px 0 */
+    opacity: 0.8;
+}
+
+.success-report {
+    display: flex;
+    align-items: center;
+}
+
+.bars {
+    width: 100%;
+}
+
+.bars img {
+    width: 32rem;
+    height: 16rem;
+    display: block;
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.decor-left-top {
+    top: 0px;
+    left: 0px;
+    width: 176px;
+    height: 176px;
+}
+.decor {
+    position: absolute;
+    z-index: 1;
+}
+.decor-right-bottom {
+    bottom: 0px;
+    right: -4rem;
+    
+}
+
+.about-image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dots {
+    position: absolute;
+    top: 1.25rem; /* 20px */
+    left: 1.25rem; /* 20px */
+    display: flex;
+    gap: 0.5rem; /* 8px */
+}
+
+.dots img {
+    width: auto;
+    height: auto;
+}
+
+.overlay-btns {
+    position: absolute;
+    top: 1.875rem; /* 30px */
+    right: 1.875rem; /* 30px */
+    display: flex;
+    
+}
+
+.btn-overlay {
+    position: absolute;
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.75rem 1rem; /* 12px 16px */
+    border-radius: 0.5rem; /* 8px */
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* 10px */
+    font-family: Ubuntu-Medium;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: #333333;
+    cursor: pointer;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1); /* 0 2px 8px */
+    transition: background 0.3s;
+}
+
+.btn-overlay:hover {
+    background: #FFFFFF;
+}
+
+.btn-overlay img {
+    width: 1.25rem; /* 20px */
+    height: 1.25rem; /* 20px */
+}
+
+.plus-btn {
+    position: absolute;
+    bottom: 1.875rem; /* 30px */
+    right: 1.875rem; /* 30px */
+    width: 3.125rem; /* 50px */
+    height: 3.125rem; /* 50px */
+    background: #F23849;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 1.75rem; /* 28px */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2); /* 0 4px 12px */
+    transition: transform 0.3s;
+}
+
+.plus-btn:hover {
+    transform: scale(1.1);
+}
+
+.about-side-text {
+    position: absolute;
+    left: -12rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-family: Ubuntu-Bold;
+    font-size: 12.75rem; /* 204px */
+    font-weight: 700;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke: 0.0625rem rgba(255, 255, 255, 0.18);
+    letter-spacing: 0.125rem;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dots-top-right {
+    position: absolute;
+    top: 2.5rem; /* 40px */
+    right: 2.5rem; /* 40px */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* 8px */
+    width: 2rem; /* 32px */
+}
+
+.dots-top-right .dot {
+    width: 0.625rem; /* 10px */
+    height: 0.625rem; /* 10px */
+    background: #F23849;
+    border-radius: 50%;
+}
+
+/* ===== CTA SECTION ===== */
+.cta {
+    background-color: #222224;
+    padding: 5rem 0; /* 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.cta .container {
+    gap: 3.75rem; /* 60px */
+    align-items: center;
+}
+
+.cta-call {
+    flex: 0 0 21.875rem; /* 350px */
+    background: #F23849;
+    padding: 3.125rem 2.5rem; /* 50px 40px */
+    border-radius: 0.75rem; /* 12px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem; /* 30px */
+    color: #FFFFFF;
+}
+
+.cta-call h2 {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.925rem; /* 46.8px */
+    text-align: center;
+    margin: 0;
+}
+
+.btn-learn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    color: #F23849;
+    padding: 1rem 2.5rem; /* 16px 40px */
+    text-decoration: none;
+    border-radius: 0.25rem; /* 4px */
+    font-family: Ubuntu-Medium;
+    font-size: 1.125rem; /* 18px */
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn-learn:hover {
+    background: #f0f0f0;
+}
+
+.cta-icons {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 3 */
+    gap: 1.5rem;
+    flex: 1;
+    width: 3,75rem;
+    height: 3,75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+    background: url('img/dots-pattern.svg') center/cover no-repeat;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+}
+/*Изменит иконки!!!*/
+.icon-item {
+    /* Убираем фиксированную высоту или увеличиваем ширину */
+    width: auto; 
+    min-width: 160px; /* Чтобы карточки были одинаковыми */
+    height: auto;
+    padding: 1rem 1.5rem; /* Добавляем отступы внутри */
+    
+    background-color: #161617;
+    border-radius: 0.75rem; /* Скругляем равномерно или как в макете */
+    
+    display: flex;
+    flex-direction: row; /* Текст будет СБОКУ */
+    align-items: center;
+    justify-content: flex-start; /* Прижимаем к левому краю */
+    gap: 1rem; 
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.icon-item:hover {
+    transform: translateY(-0.3125rem); /* -5px */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.icon-item img {
+    width: 2.5rem; /* Примерно 40px */
+    height: 2.5rem;
+    object-fit: contain;
+}
+.icon-item span {
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 1rem; /* 16px */
+    color: #FFFFFF;
+}
+
+.dots-top-left {
+    position: absolute;
+    top: 2.5rem; /* 40px */
+    left: 2.5rem; /* 40px */
+}
+
+.dots-bottom-right {
+    position: absolute;
+    bottom: 2.5rem; /* 40px */
+    right: 2.5rem; /* 40px */
+}
+
+.dot {
+    width: 0.5rem; /* 8px */
+    height: 0.5rem; /* 8px */
+    background: #7ed321;
+    border-radius: 50%;
+}
+
+/* ===== VIDEO SECTION ===== */
+.video-section {
+    position: relative;
+    height: 40.625rem; /* 650px */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.play-btn {
+    width: 6.25rem; /* 100px */
+    height: 6.25rem; /* 100px */
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3); /* 0 4px 20px */
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+.play-btn img {
+    width: 9.37rem; /* 40px */
+    height: 9.37rem; /* 40px */
+}
+
+.video-text {
+    position: absolute;
+    bottom: 3rem; /* 48px */
+    right: 18.6875rem; /* 299px */
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0 0.5rem 0.5rem 0; /* 0 8px 8px 0 */
+    overflow: hidden;
+    z-index: 10;
+}
+
+.video-text-label {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    color: #FFFFFF;
+    padding: 1.125rem 1.25rem; /* 18px 20px */
+    margin: 0;
+}
+
+.arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.0625rem; /* 65px */
+    height: 4.0625rem; /* 65px */
+    background: #F23849;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 0 0.5rem 0.5rem 0; /* 0 8px 8px 0 */
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+.arrow-btn img {
+    width: 1.6875rem; /* 27px */
+    height: 2.0625rem; /* 33px */
+}
+
+.arrow-btn:hover {
+    background: #e64343;
+}
+
+/* ===== WHY CHOOSE US SECTION ===== */
+.why-choose-us {
+    background-color: #1a1a1a;
+    padding: 5rem 0; /* 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-us .container {
+    gap: 5rem; /* 80px */
+    align-items: flex-start;
+}
+
+.why-text {
+    flex: 1;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.why-text h2 {
+    font-family: Worksans-Bold;
+    font-weight: 700;
+    font-size: 3.5rem; /* 56px */
+    line-height: 4.55rem; /* 72.8px */
+    margin: 0 0 1.5rem 0; /* 0 0 24px 0 */
+}
+
+.why-text p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.8rem; /* 28.8px */
+    margin: 0 0 2.5rem 0; /* 0 0 40px 0 */
+    opacity: 0.8;
+}
+
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem; /* 30px */
+    
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative; /* ← без этого absolute не работает */
+  border-radius: 8px;
+  
+  overflow: hidden; /* чтобы глазик не вылезал за границы */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/*расположение правильное сделать!!!*/
+.eye-overlay {
+  position: absolute;
+  bottom: 169px;
+  top: 161px;
+  right: 155px;
+  width: 40px;
+  height: 40px;
+  background: url('img/eye.svg') center/cover no-repeat;
+  z-index: 2;
+}
+.benefit-item {
+    
+    display: flex;
+    gap: 1.25rem; /* 20px */
+    align-items: flex-start;
+}
+
+.benefit-item .icon {
+  background: #F23849;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 0.5rem 1rem 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.benefit-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* 8px */
+}
+
+.benefit-content h3 {
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 1.25rem; /* 20px */
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.benefit-content p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    line-height: 1.6rem; /* 25.6px */
+    color: #aaaaaa;
+    margin: 0;
+    opacity: 1;
+}
+
+.gallery-section {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: url('img/gallery-bg.svg') center/cover no-repeat;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+     /* 15px */
+    border-radius: 0.5rem; 
+    align-items: start;
+    /* 8px */
+    
+}
+.gallery-grid img:nth-child(2){
+    margin-top: 50px;
+    
+}
+
+.gallery-grid img:nth-child(3){
+    margin-top: -110px;
+    z-index: 2;
+}
+.gallery-grid img:nth-child(4){
+    margin-top: 0px;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 100%; /* 200px */
+    object-fit: cover;
+    
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.nav-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background 0.3s ease;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-btn.next{
+    background-color: #FFFFFF;
+    color: #F23849;
+    width: 5rem;
+}
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-side-text {
+    position: absolute;
+    top: 50%;
+    right: -12.5rem;
+    transform: translateY(-50%) rotate(-90deg);
+    font-family: Ubuntu-Bold;
+    font-size: 12.75rem; /* 204px — match design */
+    font-weight: 700;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke: 0.0625rem rgba(255, 255, 255, 0.18);
+    letter-spacing: 0.125rem;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== PRICING SECTION ===== */
+
+.pricing {
+    background-color: #222224;
+    padding: 5rem 0; /* 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing .container {
+    flex-direction: column;
+    
+    align-items: center;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: 2.75rem; /* 44px */
+    line-height: 3.575rem; /* 57.2px */
+    margin: 0 0 1rem 0; /* 0 0 16px 0 */
+    color: #FFFFFF;
+}
+
+.pricing p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    line-height: 1.6rem; /* 25.6px */
+    color: #aaaaaa;
+    margin: 0 0 2.5rem 0; /* 0 0 40px 0 */
+    max-width: 37.5rem; /* 600px */
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* 16px */
+    margin-bottom: 3.125rem; /* 50px */
+}
+
+.toggle-switch > span {
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 1rem; /* 16px */
+    color: #FFFFFF;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.125rem; /* 50px */
+    height: 1.5rem; /* 24px */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    transition: 0.4s;
+    border-radius: 1.5rem; /* 24px */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1rem; /* 16px */
+    width: 1rem; /* 16px */
+    left: 0.25rem; /* 4px */
+    bottom: 0.25rem; /* 4px */
+    background: #FFFFFF;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.625rem); /* 26px */
+}
+
+.save-badge {
+    background: #F23849;
+    color: #FFFFFF;
+    font-family: Ubuntu-Medium;
+    font-size: 0.75rem; /* 12px */
+    font-weight: 500;
+    padding: 0.25rem 0.75rem; /* 4px 12px */
+    border-radius: 0.75rem; /* 12px */
+}
+
+/* Plan group: Standard + Premium объединены */
+.plan-group {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.plan-group .plan {
+    background: transparent;
+    border-radius: 0;
+}
+
+/*Исправить!!!!*/
+.plan-group .plan.standard {
+    border-right: 0.0625rem solid #3D3D40;
+    height: 21rem;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 1.875rem;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: stretch;
+}
+
+.plan {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 1.875rem; /* 40px 30px */
+    border-radius: 0.75rem; /* 12px */
+    width: 18.75rem; /* 300px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-0.3125rem); /* -5px */
+}
+
+.plan h3 {
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 0.875rem; /* 14px */
+    color: #FFFFFF;
+    margin: 0 0 1.25rem 0; /* 0 0 20px 0 */
+    text-transform: uppercase;
+    letter-spacing: 0.09375rem; /* 1.5px */
+}
+
+.price {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: 3rem; /* 48px */
+    color: #FFFFFF;
+    margin: 0 0 1.875rem 0; /* 0 0 30px 0 */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+}
+
+.price span {
+    font-family: Ubuntu-Regular;
+    font-size: 1rem; /* 16px */
+    color: #aaaaaa;
+    text-decoration: line-through;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.875rem 0; /* 0 0 30px 0 */
+    width: 100%;
+}
+
+.plan ul li {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.4rem; /* 22.4px */
+    color: #aaaaaa;
+    margin-bottom: 0.75rem; /* 12px */
+    text-align: center;
+}
+
+.details-btn {
+    background: #333333;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.875rem; /* 12px 30px */
+    border-radius: 0.25rem; /* 4px */
+    cursor: pointer;
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 0.875rem; /* 14px */
+    transition: background 0.3s ease;
+}
+
+.details-btn:hover {
+    background: #444444;
+}
+
+.expert {
+    background: #F23849;
+}
+
+.expert .price,
+.expert h3 {
+    color: #FFFFFF;
+}
+
+.expert .price span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.expert ul li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.expert .details-btn {
+    background: #FFFFFF;
+    color: #F23849;
+}
+
+.expert .details-btn:hover {
+    background: #f0f0f0;
+}
+
+.dots-right {
+    position: absolute;
+    top: 50%;
+    right: 2.5rem; /* 40px */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* 8px */
+}
+
+/* ===== TEAM SECTION ===== */
+.team {
+    background-color: #1a1a1a;
+    padding: 5rem 0; /* 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.team .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.team h2 {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: 2.75rem; /* 44px */
+    line-height: 3.575rem; /* 57.2px */
+    margin: 0 0 1rem 0; /* 0 0 16px 0 */
+    color: #FFFFFF;
+}
+
+.team p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    line-height: 1.6rem; /* 25.6px */
+    color: #ffffff;
+    margin: 0 0 3.125rem 0; /* 0 0 50px 0 */
+    max-width: 37.5rem; /* 600px */
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 1.875rem; /* 30px */
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.team-card {
+    position: relative;
+    width: 20rem;
+    
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    background: #222224;
+}
+.team-card:hover {
+    transform: translateY(-0.3125rem); /* -5px */
+}
+/*обрезат задний фон!!!*/
+.team-photo {
+    width: 100%;
+    height: 22rem;
+    
+    object-fit: contain;
+    object-position: bottom center;
+    background-color: #ffffff05;
+    flex: 1;
+}
+.dots-bottom-left{
+    bottom: 36px;
+}
+.team-info {
+    padding: 1.25rem 1.5rem;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+/*Цвет текста исправить!!!*/
+.team-info__text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.team-info h3 {
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #F23849;
+    margin: 0;
+}
+
+.team-info p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #F23849;
+    margin: 0;
+}
+/*цвет бордеров сделать!!*/
+.badge {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    background: #ffffff;
+    border-color: #F23849;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem; /* 8px */
+}
+
+.badge img {
+    width: 1.25rem; /* 20px */
+    height: 1.25rem; /* 20px */
+}
+
+.team-card.active {
+    background: #f2384710;
+}
+
+.team-card.active .team-info {
+    background: #F23849;
+}
+
+.team-card.active .team-info h3,
+.team-card.active .team-info p {
+    color: #FFFFFF;
+}
+
+.social-icons {
+    position: absolute;
+    top: 1.25rem; /* 20px */
+    right: 1.25rem; /* 20px */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* 8px */
+}
+
+.social-icons img {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    width: 3rem; /* 30px */
+    height: 3rem; /* 30px */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    font-size: 0.75rem; /* 12px */
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #FFFFFF;
+}
+
+.dot-top-right {
+    position: absolute;
+    top: 2.5rem; /* 40px */
+    right: 2.5rem; /* 40px */
+    width: 0.625rem; /* 10px */
+    height: 0.625rem; /* 10px */
+    background: #F23849;
+    border-radius: 50%;
+}
+.dots-bottom-left {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 0.5rem);
+  gap: 0.5rem;
+}
+/* ===== CLIENTS SECTION ===== */
+.clients {
+    background-color: #222224;
+    padding: 5rem 0; /* 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.clients .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 1920px;
+    height: 823px;
+}
+
+.clients h2 {
+    font-family: Worksans-Bold;
+    font-weight: 700;
+    font-size: 3.5rem; /* 56px */
+    line-height: 4.55rem; /* 72.8px */
+    margin: 0 0 1rem 0; /* 0 0 16px 0 */
+    color: #FFFFFF;
+}
+
+.clients p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    line-height: 1.6rem; /* 25.6px */
+    color: #aaaaaa;
+    margin: 0 0 3.125rem 0; /* 0 0 50px 0 */
+    max-width: 37.5rem; /* 600px */
+}
+
+.clients-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem; /* 80px */
+    width: 100%;
+}
+.testimonial {
+    flex: 1;
+    text-align: left;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* 20px */
+    padding-top: 20rem; /* Добавьте это свойство */
+}
+
+.testimonial p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.8rem; /* 28.8px */
+    margin: 0;
+    opacity: 0.9;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.testimonial h3 {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: 1.5rem; /* 24px */
+    color: #F23849;
+    margin: 0;
+}
+
+.testimonial .social-icons {
+    position: static;
+    flex-direction: row;
+    gap: 0.75rem; /* 12px */
+}
+
+.social-link {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 0.875rem; /* 14px */
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0.75rem; /* 12px */
+}
+
+.avatars {
+    position: relative;
+    width: 22rem;
+    height: 22rem;
+    flex-shrink: 0;
+}
+
+.avatar-item {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.1875rem solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.avatar-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-item:hover {
+    transform: scale(1.08);
+}
+
+.avatar-item.active {
+    border-color: #F23849;
+}
+
+/* Scattered positions */
+.avatar-item:nth-child(1) { width: 5.5rem; height: 5.5rem; top: 0;    left: 50%; transform: translateX(-50%); }
+.avatar-item:nth-child(2) { width: 6rem;   height: 6rem;   top: 8%;   right: 0; }
+.avatar-item:nth-child(3) { width: 9rem;   height: 9rem;   bottom: 4rem;  right: 6rem; transform: translateX(-50%); }
+.avatar-item:nth-child(4) { width: 4.3rem; height: 4.3rem; top: 5%;   left: -2rem; }
+.avatar-item:nth-child(5) { width: 5.5rem; height: 5.5rem; bottom: 3rem; right: 0; }
+.avatar-item:nth-child(6) { width: 5.5rem; height: 5.5rem; bottom: 3rem; left: -2rem; }
+.avatar-item:nth-child(7) { width: 5rem; height: 5rem; bottom: 10rem; right: 25rem; }
+
+.avatar-item.active { transform: translateX(-50%) scale(1.08); }
+
+.clients-side-text {
+    position: absolute;
+    top: 50%;
+    left: -12rem;
+    transform: translateY(-50%) rotate(-90deg);
+    font-family: Ubuntu-Bold;
+    font-size: 12.75rem; /* 204px */
+    font-weight: 700;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke: 0.0625rem rgba(255, 255, 255, 0.18);
+    letter-spacing: 0.125rem;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== FEATURES FOOTER ===== */
+.features-footer {
+    background-color: #28282A;
+    padding: 3.75rem 0; /* 60px */
+    position: relative;
+    overflow: hidden;
+}
+
+.features-footer .container {
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.75rem; /* 60px */
+}
+
+.feature-item {
+    display: flex;
+    align-items: center; /* Центрирует иконку и текст по вертикальной оси */
+    gap: 1.25rem;        /* Расстояние между иконкой и текстом */
+    text-align: left;    /* Текст прижат к левому краю */
+}
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+}
+.feature-item:hover {
+    transform: translateY(-0.3125rem); /* -5px */
+}
+
+.feature-icon {
+    width: 3.75rem; /* 60px */
+    height: 3.75rem; /* 60px */
+    flex-shrink: 0;
+}
+
+.feature-item h3 {
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 1.125rem; /* 18px */
+    margin: 0 0 0.25rem 0; /* 0 0 4px 0 */
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem; /* 1px */
+}
+
+.feature-item p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.4rem; /* 22.4px */
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* ===== NEWSLETTER SECTION ===== */
+.newsletter {
+    background-color: #222224;
+    padding: 5rem 0; /* 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter .container {
+    max-width: 45rem;      /* Ограничиваем ширину текста, чтобы он не растягивался во весь экран */
+    margin: 0 auto;        /* Центрируем сам контейнер */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   /* Центрируем содержимое (заголовок, текст, инпут) */
+    text-align: center;    /* Центрируем текст внутри параграфа */
+    gap: 1.5rem;           /* Расстояние между элементами */
+    padding: 0 1rem;       /* Убираем лишние 18.75rem и ставим нормальный отступ */
+}
+
+.newsletter h2 {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: 2.75rem; /* 44px */
+    line-height: 3.575rem; /* 57.2px */
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.newsletter p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+
+.newsletter-form {
+    display: flex;
+    width: 100%;
+    max-width: 31.25rem; /* 500px */
+    gap: 0;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 1rem 1.25rem; /* 16px 20px */
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.1); /* 1px */
+    border-radius: 0.25rem 0 0 0.25rem; /* 4px 0 0 4px */
+    color: #FFFFFF;
+    font-family: Ubuntu-Regular;
+    font-size: 1rem; /* 16px */
+    transition: border 0.3s ease;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #F23849;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.subscribe-btn {
+    background: #F23849;
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem 1.5rem; /* 16px 24px */
+    border-radius: 0 0.25rem 0.25rem 0; /* 0 4px 4px 0 */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.subscribe-btn img {
+    width: 1.25rem; /* 20px */
+    height: 1.25rem; /* 20px */
+}
+
+.subscribe-btn:hover {
+    background: #e64343;
+}
+
+.red-dot {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #F23849;
+    border-radius: 50%;
+}
+
+.purple-dot {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    width: 0.5rem; /* 8px */
+    height: 0.5rem; /* 8px */
+    background: #9c27b0;
+    border-radius: 50%;
+}
+
+.green-dot {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: 0.5rem; /* 8px */
+    height: 0.5rem; /* 8px */
+    background: #7ed321;
+    border-radius: 50%;
+}
+
+/* ===== FOOTER ===== */
+.red-dot__footer {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #F23849;
+    border-radius: 50%;
+}
+.blue-dot__footer {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 45%;
+    left: 40%;
+}
+
+.footer__info {
+    background-color: #1a1a1a;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    padding: 3.75rem 0 0;  /* 60px 0 0 */
+}
+
+.footer .container {
+    flex-wrap: wrap;
+    gap: 3.75rem; /* 60px */
+    align-items: flex-start;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 13.75rem; /* 220px */
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col h3 {
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 1.125rem; /* 18px */
+    margin: 0 0 1.5rem 0; /* 0 0 24px 0 */
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem; /* 1px */
+    color: #FFFFFF;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* 12px */
+}
+
+.footer-col ul li a {
+    font-family: Ubuntu-Regular;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem; /* 14px */
+    line-height: 1.4rem; /* 22.4px */
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #FFFFFF;
+}
+
+.footer-logo {
+    width: 6.25rem; /* 100px */
+    height: auto;
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.footer-col p {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1rem; /* 14px */
+    line-height: 1.4rem; /* 22.4px */
+    color: #FFFFFF;
+    margin: 0 0 1.5rem 0; /* 0 0 24px 0 */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* 16px */
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem; /* 12px */
+}
+
+.contact-item img {
+    width: 1.25rem;
+    height: 1.5625rem;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.contact-item span {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 1rem; /* 14px */
+    line-height: 1.4rem; /* 22.4px */
+    color: #969696;
+}
+
+.contact-item a {
+    font-family: Ubuntu-Regular;
+    color: #969696;
+    text-decoration: none;
+    font-size: 1rem; /* 14px */
+    line-height: 1.4rem; /* 22.4px */
+    transition: color 0.3s;
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start; 
+  gap: 0.75rem; 
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 1rem; 
+  height: 1rem;
+}
+
+.phone-numbers {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-numbers a {
+  color: #969696;
+  text-decoration: none;
+  font-family: Ubuntu-Regular;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem; 
+}
+
+
+
+
+.contact-item a:hover {
+    color: #FFFFFF;
+}
+
+.opening-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px; /* отступ до списка */
+}
+
+.opening-header h3 {
+    white-space: nowrap;
+    font-family: Ubuntu-Medium;
+    font-size: 1.375rem;
+    color: white;
+    margin: 0;
+}
+
+.sunday-off {
+  background: #F23849;
+  color: #FFFFFF;
+  border: none;
+  width: 113px;
+  height: 21px;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: Ubuntu-Bold;
+ 
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  transition: background 0.3s;
+}
+.sunday-off:hover {
+    background: #e64343;
+}
+
+.hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* 12px */
+}
+
+.hour-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.hour-item:not(:last-child) {
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.05);
+}
+
+.hour-item img {
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+    flex-shrink: 0;
+}
+
+.hour-item span:nth-child(2) {
+    font-family: Ubuntu-Medium;
+    font-weight: 500;
+    font-size: 0.875rem; /* 14px */
+    color: #FFFFFF;
+    min-width: 5rem; /* 80px */
+}
+
+.hour-item span:nth-child(3) {
+    font-family: Ubuntu-Regular;
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    color: #FFFFFF;
+}
+
+.footer-bottom {
+    background-color: #161617;
+    padding: 1.25rem 0; /* 20px 0 */
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.05); /* 1px */
+    margin-top: 3.75rem; /* 60px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;/* 1920px */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 18.75rem; /* 300px */
+    padding-right: 18.75rem; /* 300px */
+}
+
+.footer-bottom p {
+    font-family: Ubuntu-Regular;
+    color: #aaaaaa;
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    margin: 0;
+}
+
+.social-icons-footer {
+    display: flex;
+    gap: 1rem; /* 16px */
+    align-items: center;
+}
+
+.social-icons-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem; /* 36px */
+    height: 2.25rem; /* 36px */
+    transition: transform 0.3s;
+}
+
+.social-icons-footer a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons-footer img {
+    width: 1.5rem; /* 24px */
+    height: 1.5rem; /* 24px */
+}
+
+/* ===== MEDIA QUERIES FOR iPHONE 12 (390px) ===== */
+@media (max-width: 48rem) { /* 768px */
+    html {
+        font-size: 14px; /* Slightly smaller base for tablets */
+    }
+
+    .container {
+        padding: 0 2rem; /* 32px */
+    }
+    
+    .header-container {
+        padding: 0 1.25rem; /* 20px */
+        gap: 1.25rem; /* 20px */
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: space-around;
+        gap: 1rem; /* 16px */
+        padding-top: 0.625rem; /* 10px */
+    }
+
+    .nav-link {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .join-btn {
+        font-size: 0.875rem; /* 14px */
+        padding: 0.5rem 1rem; /* 8px 16px */
+    }
+    
+    .hero-container {
+        padding: 0 1.25rem; /* 20px */
+        min-height: 35rem; /* 560px */
+    }
+
+    .hero {
+        min-height: 35rem; /* 560px */
+    }
+
+    .hero-content {
+        padding-top: 3rem; /* 48px */
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.5rem; /* 40px */
+        line-height: 3rem; /* 48px */
+    }
+
+    .hero-description {
+        font-size: 1rem; /* 16px */
+        line-height: 1.5rem; /* 24px */
+        margin-bottom: 2rem; /* 32px */
+    }
+
+    .hero-man {
+        width: 70%;
+        height: auto;
+        object-position: bottom center;
+    }
+
+    .trainer-card {
+        top: 3rem; /* 48px */
+        right: 1rem; /* 16px */
+        width: 8rem; /* 128px */
+        padding: 0.75rem; /* 12px */
+    }
+
+    .trainer-avatar {
+        width: 3rem; /* 48px */
+        height: 3rem; /* 48px */
+    }
+
+    .trainer-name,
+    .trainer-title {
+        font-size: 0.625rem; /* 10px */
+    }
+
+    .stats-card {
+        bottom: 2rem; /* 32px */
+        right: 1rem; /* 16px */
+        left: 1rem; /* 16px */
+        width: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .design-content {
+        display: none;
+    }
+
+    .features .container {
+        flex-direction: column;
+        gap: 3rem; /* 48px */
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        gap: 2rem; /* 32px */
+    }
+
+    .feature-card {
+        max-width: 100%;
+    }
+
+    .features-right {
+        flex: 1;
+        width: 100%;
+    }
+
+    .about .container {
+        flex-direction: column;
+        gap: 2rem; /* 32px */
+    }
+
+    .about-text h2 {
+        font-size: 2rem; /* 32px */
+        line-height: 2.5rem; /* 40px */
+    }
+
+    .about-side-text,
+    .gallery-side-text,
+    .clients-side-text {
+        display: none;
+    }
+
+    .overlay-btns {
+        top: 0.5rem; /* 8px */
+        right: 0.5rem; /* 8px */
+        gap: 0.5rem; /* 8px */
+    }
+
+    .btn-overlay {
+        padding: 0.5rem 0.75rem; /* 8px 12px */
+        font-size: 0.75rem; /* 12px */
+    }
+
+    .plus-btn {
+        width: 2.5rem; /* 40px */
+        height: 2.5rem; /* 40px */
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .cta .container {
+        flex-direction: column;
+        gap: 2rem; /* 32px */
+    }
+
+    .cta-call {
+        flex: 1;
+        width: 100%;
+    }
+
+    .cta-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem; /* 16px */
+    }
+
+    .video-text {
+        right: 1rem; /* 16px */
+        left: 1rem; /* 16px */
+        bottom: 1rem; /* 16px */
+    }
+
+    .video-text-label {
+        font-size: 0.875rem; /* 14px */
+        padding: 0.75rem 1rem; /* 12px 16px */
+    }
+
+    .arrow-btn {
+        width: 3rem; /* 48px */
+        height: 3rem; /* 48px */
+    }
+
+    .why-choose-us .container {
+        flex-direction: column;
+        gap: 2rem; /* 32px */
+    }
+
+    .why-text h2 {
+        font-size: 2rem; /* 32px */
+        line-height: 2.5rem; /* 40px */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing .container,
+    .team .container,
+    .clients .container {
+        padding: 0 1.25rem; /* 20px */
+    }
+
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-group {
+        flex-direction: column;
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    .plan-group .plan.standard {
+        border-right: none;
+        border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.12);
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clients-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .avatars {
+        width: 18rem;
+        height: 18rem;
+        margin: 0 auto;
+    }
+
+    .avatar-item:nth-child(3),
+    .avatar-item.active {
+        transform: translateX(-50%) scale(1.0);
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .features-footer .container {
+        flex-direction: column;
+        gap: 2rem; /* 32px */
+    }
+
+    .feature-item {
+        width: 100%;
+    }
+
+    .newsletter .container {
+        padding: 0 1.25rem; /* 20px */
+    }
+
+    .footer .container {
+        flex-direction: column;
+        gap: 2rem; /* 32px */
+        padding: 0 1.25rem; /* 20px */
+    }
+
+    .footer-col {
+        min-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem; /* 16px */
+        padding: 1rem 1.25rem; /* 16px 20px */
+    }
+}
+
+@media (max-width: 24.375rem) { /* 390px - iPhone 12 */
+    html {
+        font-size: 12px; /* Smaller base for mobile */
+    }
+
+    .container {
+        padding: 0 1rem; /* 16px */
+    }
+
+    .header-container {
+        padding: 0 1rem; /* 16px */
+        height: auto;
+        min-height: 4rem; /* 64px */
+    }
+
+    .site-header {
+        height: auto;
+        min-height: 4rem; /* 64px */
+    }
+
+    .logo img {
+        width: 4rem; /* 64px */
+        height: 2rem; /* 32px */
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 0.5rem; /* 8px */
+    }
+
+    .nav-link {
+        font-size: 0.75rem; /* 12px */
+    }
+
+    .join-btn {
+        font-size: 0.75rem; /* 12px */
+        padding: 0.5rem 0.75rem; /* 8px 12px */
+    }
+
+    .hero {
+        min-height: 25rem; /* 400px */
+    }
+
+    .hero-container {
+        padding: 0 1rem; /* 16px */
+        min-height: 25rem; /* 400px */
+    }
+
+    .hero-content {
+        padding-top: 2rem; /* 32px */
+    }
+
+    .hero-title {
+        font-size: 1.75rem; /* 28px */
+        line-height: 2rem; /* 32px */
+        margin-bottom: 0.75rem; /* 12px */
+    }
+
+    .hero-description {
+        font-size: 0.875rem; /* 14px */
+        line-height: 1.25rem; /* 20px */
+        margin-bottom: 1.5rem; /* 24px */
+    }
+
+    .hero-btn {
+        padding: 0.75rem 1.5rem; /* 12px 24px */
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .hero-background {
+        width: 100%;
+    }
+
+    .hero-man {
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .trainer-card {
+        position: static;
+        width: 100%;
+        max-width: 10rem; /* 160px */
+        margin: 1rem auto 0; /* 16px auto 0 */
+    }
+
+    .stats-card {
+        position: static;
+        width: 100%;
+        margin-top: 1rem; /* 16px */
+    }
+
+    .feature-cards {
+        gap: 1.5rem; /* 24px */
+    }
+
+    .feature-text h2 {
+        font-size: 1.5rem; /* 24px */
+        line-height: 2rem; /* 32px */
+    }
+
+    .about-text h2,
+    .why-text h2,
+    .clients h2 {
+        font-size: 1.5rem; /* 24px */
+        line-height: 2rem; /* 32px */
+    }
+
+    .about-text p,
+    .why-text p {
+        font-size: 0.875rem; /* 14px */
+        line-height: 1.5rem; /* 24px */
+    }
+
+    .cta-call h2 {
+        font-size: 1.5rem; /* 24px */
+        line-height: 2rem; /* 32px */
+    }
+
+    .cta-icons {
+        grid-template-columns: 1fr;
+    }
+
+    .video-section {
+        height: 20rem; /* 320px */
+    }
+
+    .play-btn {
+        width: 4rem; /* 64px */
+        height: 4rem; /* 64px */
+    }
+
+    .play-btn img {
+        width: 1.5rem; /* 24px */
+        height: 1.5rem; /* 24px */
+    }
+
+    .video-text {
+        flex-direction: column;
+        border-radius: 0.5rem; /* 8px */
+    }
+
+    .arrow-btn {
+        width: 100%;
+        height: 2.5rem; /* 40px */
+        border-radius: 0 0 0.5rem 0.5rem; /* 0 0 8px 8px */
+    }
+
+    .benefit-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pricing h2,
+    .team h2 {
+        font-size: 1.75rem; /* 28px */
+        line-height: 2.25rem; /* 36px */
+    }
+
+    .toggle-switch {
+        flex-wrap: wrap;
+        gap: 0.5rem; /* 8px */
+    }
+
+    .plan {
+        width: 100%;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 18rem; /* 288px */
+    }
+
+    .testimonial p {
+        font-size: 0.875rem; /* 14px */
+        line-height: 1.5rem; /* 24px */
+    }
+
+    .newsletter h2 {
+        font-size: 1.75rem; /* 28px */
+        line-height: 2.25rem; /* 36px */
+    }
+
+    .newsletter p {
+        font-size: 0.875rem; /* 14px */
+        line-height: 1.4rem; /* 22.4px */
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 0.5rem; /* 8px */
+    }
+
+    .newsletter-form input {
+        border-radius: 0.25rem; /* 4px */
+    }
+
+    .subscribe-btn {
+        border-radius: 0.25rem; /* 4px */
+        padding: 0.75rem 1.5rem; /* 12px 24px */
+    }
+
+    .footer-bottom {
+        padding: 0.75rem 1rem; /* 12px 16px */
+    }
+}
